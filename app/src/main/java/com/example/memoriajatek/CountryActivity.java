@@ -1,13 +1,13 @@
 package com.example.memoriajatek;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.gridlayout.widget.GridLayout;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -29,6 +29,7 @@ public class CountryActivity extends AppCompatActivity implements OnMapReadyCall
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_country);
 
@@ -96,7 +97,6 @@ public class CountryActivity extends AppCompatActivity implements OnMapReadyCall
         }
     }
 
-
     private String getCountryNameByLatLng(LatLng latLng) {
         for (String country : countryLatLngMap.keySet()) {
             LatLng countryLatLng = countryLatLngMap.get(country);
@@ -126,21 +126,19 @@ public class CountryActivity extends AppCompatActivity implements OnMapReadyCall
     }
 
     public boolean onMarkerClick(Marker marker) {
-        selectedMarker = marker; // Kattintott Marker tárolása
-        return false; // Visszatérés a default viselkedéshez
+        selectedMarker = marker;
+        return false;
     }
 
     public void backToMenuWithCountry(View view) {
         if (selectedMarker != null) {
             String selectedCountry = getSelectedCountry();
             if (!selectedCountry.equals("Unknown")) {
-                // Kiválasztott ország mentése SharedPreferences-ben
                 SharedPreferences sharedPreferences = getSharedPreferences("selected_country", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("country", selectedCountry);
                 editor.apply();
 
-                // A főmenü Activity indítása a kiválasztott országgal
                 Intent intent = new Intent(this, MainActivity.class);
                 intent.putExtra("selectedCountry", selectedCountry);
                 startActivity(intent);

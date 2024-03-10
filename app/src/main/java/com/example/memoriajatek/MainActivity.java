@@ -2,8 +2,10 @@ package com.example.memoriajatek;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,20 +17,26 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
     }
 
-
     public void startGame(View view) {
+
         SharedPreferences sharedPreferences = getSharedPreferences("selected_country", MODE_PRIVATE);
         String selectedCountry = sharedPreferences.getString("country", null);
-
+        if(selectedCountry != null){
         Intent intent = new Intent(this, GameActivity.class);
         intent.putExtra("selectedCountry", selectedCountry);
 
-        startActivity(intent);
+            startActivity(intent);
+        }
+        else{
+            Toast.makeText(this, "Nincs kiválasztva egy ország sem, kérlek válassz ki egy országot!", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
 
@@ -36,10 +44,8 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         Intent intent;
         if (currentUser != null) {
-            // Ha a felhasználó be van jelentkezve, irányítsd a Firebase Activity-re
             intent = new Intent(this, Firebase.class);
         } else {
-            // Ha a felhasználó nincs bejelentkezve, irányítsd a Login Activity-re
             intent = new Intent(this, Login.class);
         }
         startActivity(intent);

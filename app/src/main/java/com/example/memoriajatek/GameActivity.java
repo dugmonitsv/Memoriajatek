@@ -3,6 +3,7 @@ package com.example.memoriajatek;
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.hardware.Sensor;
@@ -54,7 +55,7 @@ public class GameActivity extends AppCompatActivity {
 
     private ImageView[] imageViews;
     TextView textView,timerText;
-    boolean settingUp =false;
+    boolean settingUp = false;
     Timer timer;
     TimerTask timerTask;
     double time = 0.0;
@@ -77,6 +78,7 @@ public class GameActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
@@ -97,7 +99,7 @@ public class GameActivity extends AppCompatActivity {
         if (intent != null && intent.hasExtra("selectedCountry")) {
             selectedCountry = intent.getStringExtra("selectedCountry");
         } else {
-            Log.e("GameActivity", "No selected country found in intent");
+            Toast.makeText(this, "Nincsen kiválasztva ország, kérlek válassz ki egyet!", Toast.LENGTH_SHORT).show();
             return;
         }
         
@@ -199,7 +201,6 @@ public class GameActivity extends AppCompatActivity {
 
 
 
-
     private void shuffleCards() {
         time = 0.0;
         timerText.setText(getTimerText());
@@ -245,7 +246,6 @@ public class GameActivity extends AppCompatActivity {
 
         }
         shuffleCards();
-
     }
 
     private void startTimer() {
@@ -464,14 +464,6 @@ public class GameActivity extends AppCompatActivity {
                             .build()
             );
             Toast.makeText(this, "Gratulálok, megtaláltad az összes párt!", Toast.LENGTH_SHORT).show();
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Intent intent = new Intent(GameActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            }, 3000);
 
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             if (currentUser != null) {
@@ -527,7 +519,6 @@ public class GameActivity extends AppCompatActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     Double bestTime = dataSnapshot.getValue(Double.class);
                     if (bestTime == null || time < bestTime) {
-                        // Ha még nincs mentett idő vagy az új idő jobb, frissítjük az adatbázist
                         countryScoresRef.setValue(time).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
@@ -543,7 +534,6 @@ public class GameActivity extends AppCompatActivity {
 
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
-                    // Hiba kezelése
                 }
             });
         } else {

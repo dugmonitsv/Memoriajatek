@@ -1,6 +1,7 @@
 package com.example.memoriajatek;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,10 +37,10 @@ public class Login extends AppCompatActivity {
     int RC_SIGN_IN=20;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Firebase inicializálása
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
 
@@ -87,7 +88,6 @@ public class Login extends AppCompatActivity {
                         if (task.isSuccessful()){
                             FirebaseUser user = auth.getCurrentUser();
                             if (user != null) {
-                                // Ha a bejelentkezés sikeres, felvesszük a felhasználót az adatbázisba
                                 HashMap<String, Object> map = new HashMap<>();
                                 map.put("id", user.getUid());
                                 map.put("name", user.getDisplayName());

@@ -10,15 +10,15 @@
 
     <TextView
         android:id="@+id/cim"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:layout_marginTop="70dp"
         android:text="MEMÓRIAJÁTÉK"
         android:textColor="@color/white"
         android:textIsSelectable="false"
-        android:textSize="43sp"
+        android:textSize="45dp"
         android:textStyle="bold|italic"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,9 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintVertical_bias="0.113"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
 
     <Button
         android:id="@+id/toplista"
@@ -55,7 +57,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/profile"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
 
     <Button
         android:id="@+id/jatek"
@@ -69,14 +73,19 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
 
     <Button
         android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/button"
+        android:onClick="profile"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="Profil"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
@@ -84,10 +93,8 @@
         app:layout_constraintEnd_toStartOf="@+id/toplista"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cim"
-        tools:ignore="MissingConstraints"
-        android:onClick="profile"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

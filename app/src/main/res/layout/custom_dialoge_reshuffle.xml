@@ -50,7 +50,9 @@
                 android:text="Mégsem"
                 android:textColor="@color/darkblue"
                 android:textSize="15dp"
-                tools:ignore="TextSizeCheck" />
+                tools:ignore="TextSizeCheck"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
 
             <Space
                 android:layout_width="0dp"
@@ -66,7 +68,9 @@
                 android:text="Igen"
                 android:textColor="@color/darkblue"
                 android:textSize="15dp"
-                tools:ignore="TextSizeCheck"/>
+                tools:ignore="TextSizeCheck"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
 
             <Space
                 android:layout_width="0dp"

@@ -1,6 +1,7 @@
 package com.example.memoriajatek;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,7 @@ public class Firebase extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firebase);
 
@@ -42,8 +44,6 @@ public class Firebase extends AppCompatActivity {
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
-            // Be van jelentkezve, megjelenítjük a Firebase tartalmát
-
             name = findViewById(R.id.nev);
             email = findViewById(R.id.email);
             signOut = findViewById(R.id.signOut);
@@ -61,15 +61,14 @@ public class Firebase extends AppCompatActivity {
             });
 
         } else {
-            // Nincs bejelentkezve, irányítjuk a felhasználót a bejelentkezési Activity-re
             Intent loginIntent = new Intent(this, Login.class);
             startActivity(loginIntent);
-            finish(); // bezárjuk a Firebase Activity-t, hogy ne lehessen visszalépni rá
+            finish();
         }
     }
 
     void signOut() {
-        FirebaseAuth.getInstance().signOut(); // Firebase bejelentkezésből való kijelentkezés
+        FirebaseAuth.getInstance().signOut();
         mGoogleSignInClient.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
