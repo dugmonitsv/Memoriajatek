@@ -28,7 +28,7 @@
             android:exported="false"
             android:label="@string/title_activity_maps"/>
         <!--
-             TODO: Before you run your application, you need a Google Maps API key.
+
 
              To get one, follow the directions here:
 
