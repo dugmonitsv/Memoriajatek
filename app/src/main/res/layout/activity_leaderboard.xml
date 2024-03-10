@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/legjobbIdo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="T O P L I S T A"
+            android:textAlignment="center"
+            android:textColor="@color/darkblue"
+            android:textSize="40sp"
+            android:textStyle="bold|italic" />
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCountries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/legjobbIdo"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bkg"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Belgium"
+                        android:textSize="22dp"
+                        android:textColor="@color/darkblue"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="3dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/purple" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Globális"
+                            android:paddingLeft="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/GB"/>
+
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/purple"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/SB"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saját"
+                            android:gravity="right"
+                            android:paddingRight="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"/>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bkg"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Franciaország"
+                        android:textSize="22dp"
+                        android:textColor="@color/darkblue"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="3dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/purple" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Globális"
+                            android:paddingLeft="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/GF"/>
+
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/purple"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/SF"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saját"
+                            android:gravity="right"
+                            android:paddingRight="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"/>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bkg"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Görögország"
+                        android:textSize="22dp"
+                        android:textColor="@color/darkblue"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="3dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/purple" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Globális"
+                            android:paddingLeft="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/GG"/>
+
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/purple"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/SG"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saját"
+                            android:gravity="right"
+                            android:paddingRight="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"/>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bkg"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Magyarország"
+                        android:textSize="22dp"
+                        android:textColor="@color/darkblue"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="3dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/purple" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Globális"
+                            android:paddingLeft="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/GM"/>
+
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/purple"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/SM"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saját"
+                            android:gravity="right"
+                            android:paddingRight="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"/>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bkg"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Olaszország"
+                        android:textSize="22dp"
+                        android:textColor="@color/darkblue"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="3dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/purple" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Globális"
+                            android:paddingLeft="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/GO"/>
+
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/purple"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/SO"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saját"
+                            android:gravity="right"
+                            android:paddingRight="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"/>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bkg"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Spanyolország"
+                        android:textSize="22dp"
+                        android:textColor="@color/darkblue"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="3dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/purple" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Globális"
+                            android:paddingLeft="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/GS"/>
+
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/purple"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textStyle="italic"
+                            android:id="@+id/SS"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saját"
+                            android:gravity="right"
+                            android:paddingRight="15dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/darkblue"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"/>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fomenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+                android:onClick="backToMenu"
+                android:text="Főmenü"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>
