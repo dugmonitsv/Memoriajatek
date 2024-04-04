@@ -99,7 +99,7 @@ public class GameActivity extends AppCompatActivity {
         if (intent != null && intent.hasExtra("selectedCountry")) {
             selectedCountry = intent.getStringExtra("selectedCountry");
         } else {
-            Toast.makeText(this, "Nincsen kiválasztva ország, kérlek válassz ki egyet!", Toast.LENGTH_SHORT).show();
+            Log.e("GameActivity", "No selected country found in intent");
             return;
         }
         
@@ -464,7 +464,14 @@ public class GameActivity extends AppCompatActivity {
                             .build()
             );
             Toast.makeText(this, "Gratulálok, megtaláltad az összes párt!", Toast.LENGTH_SHORT).show();
-
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(GameActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }, 3000);
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             if (currentUser != null) {
                 saveBestTimeForUser(time);
@@ -577,7 +584,7 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 
-    public void backToMenu(View view) {
+    public void backToMenu() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();

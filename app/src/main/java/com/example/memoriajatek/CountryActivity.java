@@ -21,11 +21,14 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.HashMap;
 
+
+
 public class CountryActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private HashMap<String, LatLng> countryLatLngMap;
     private Marker selectedMarker;
+    String myApiKey = BuildConfig.API_KEY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

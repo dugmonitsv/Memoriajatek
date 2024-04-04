@@ -39,35 +39,35 @@
         android:id="@+id/signOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="80dp"
+        android:background="@drawable/button"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="Kijelentkezés"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/button"
-        android:textColor="#FFFFFF"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="56dp"
         android:layout_marginBottom="80dp"
+        android:background="@drawable/button"
         android:onClick="backToMenu"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="Főmenü"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toEndOf="@+id/signOut"
-        tools:ignore="MissingConstraints"
-        android:background="@drawable/button"
-        android:textColor="#FFFFFF"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"/>
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/picture"
