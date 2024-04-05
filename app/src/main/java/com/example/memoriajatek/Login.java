@@ -28,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 
 public class Login extends AppCompatActivity {
-
+    String myApiKey = BuildConfig.API_KEY2;
     Button googleAuth;
     FirebaseAuth auth;
     FirebaseDatabase database;

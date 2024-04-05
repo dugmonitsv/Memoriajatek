@@ -29,6 +29,7 @@ public class Firebase extends AppCompatActivity {
     TextView name, email;
     Button signOut;
     ImageView picture;
+    String myApiKey = BuildConfig.API_KEY2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

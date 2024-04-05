@@ -52,7 +52,6 @@ import nl.dionsegijn.konfetti.core.models.Size;
 import nl.dionsegijn.konfetti.xml.KonfettiView;
 
 public class GameActivity extends AppCompatActivity {
-
     private ImageView[] imageViews;
     TextView textView,timerText;
     boolean settingUp = false;

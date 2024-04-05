@@ -14,6 +14,9 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
+    String myApiKey = BuildConfig.API_KEY;
+    String myApiKey2 = BuildConfig.API_KEY2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

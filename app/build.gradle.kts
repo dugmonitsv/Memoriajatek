@@ -15,7 +15,7 @@ localProperties.load(FileInputStream(localPropertiesFile))
 android {
     namespace = "com.example.memoriajatek"
     compileSdk = 34
-    
+
     buildFeatures {
         buildConfig = true
     }
@@ -30,6 +30,8 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "API_KEY", "\"${localProperties.getProperty("apiKey")}\"")
+        buildConfigField("String", "API_KEY2", "\"${localProperties.getProperty("apiKey2")}\"")
+
 
     }
 
@@ -46,6 +48,8 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+
 }
 
 dependencies {
